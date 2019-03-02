@@ -203,7 +203,12 @@ static void formsubmit(struct inputattrib *trigger);
 static void
 make_window(void)
 {
-#if WWW_CONF_HISTORY_SIZE > 0
+   typedef unsigned char byte;
+  *(byte*) 0xD020 = 3;
+  *(byte*) 0xD021 = 7;
+  *(byte*) 0x0286 = 0;
+
+  #if WWW_CONF_HISTORY_SIZE > 0
   CTK_WIDGET_ADD(&mainwindow, &backbutton);
 #endif /* WWW_CONF_HISTORY_SIZE > 0 */
   CTK_WIDGET_ADD(&mainwindow, &downbutton);
