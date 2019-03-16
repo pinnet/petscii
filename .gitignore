@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
 apps/webit/
+contiki
 
 # Object files
 *.o
