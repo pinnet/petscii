@@ -36,7 +36,7 @@ apps/webit/
 *.i*86
 *.x86_64
 *.hex
-*.64
+*.c64
 
 # Debug files
 *.dSYM/
